@@ -5,8 +5,11 @@ def encrypt(text, s):
     for i in range(len(text)):
         char = text[i]
 
+        if char == " ":
+            result += " "
+
         # Encrypt uppercase characters
-        if (char.isupper()):
+        elif (char.isupper()):
             result += chr((ord(char) + s - 65) % 26 + 65)
 
         # Encrypt lowercase characters
@@ -23,8 +26,11 @@ def decrypt(text, s):
     for i in range(len(text)):
         char = text[i]
 
+        if char == " ":
+            result += " "
+
         # Encrypt uppercase characters
-        if (char.isupper()):
+        elif (char.isupper()):
             result += chr((ord(char) - s - 65) % 26 + 65)
 
         # Encrypt lowercase characters
@@ -34,9 +40,10 @@ def decrypt(text, s):
     return result
 
 
-text = "DHRUV"
-s = 10
-print("Text  : " + text)
-print("Shift : " + str(s))
-print("Encryption: " + encrypt(text, s))
-print("Decryption: " + decrypt(encrypt(text, s).lower(), s))
+if __name__ == "__main__":
+    text = "Dhruv"
+    s = 10
+    print("Text  : " + text)
+    print("Shift : " + str(s))
+    print("Encryption: " + encrypt(text, s))
+    print("Decryption: " + decrypt(encrypt(text, s), s))

@@ -33,9 +33,9 @@ def decrypt(text):
 
     return result
 
-
-text = "DHRUV"
-print("Text  : " + text)
-print("Shift : 13")
-print("Encryption: " + encrypt(text))
-print("Decryption: " + decrypt(encrypt(text).lower()))
+if __name__ == "__main__":
+    text = "Dhruv"
+    print("Text  : " + text)
+    print("Shift : 13")
+    print("Encryption: " + encrypt(text))
+    print("Decryption: " + decrypt(encrypt(text).lower()))

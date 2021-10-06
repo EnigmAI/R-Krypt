@@ -33,7 +33,7 @@ def encryptRailFence(text, key):
 
 
 def decryptRailFence(cipher, key):
-    # create the matrix to cipher plain text key = rows, length(text) = columns filling the rail matrix to distinguish 
+    # create the matrix to cipher plain text key = rows, length(text) = columns filling the rail matrix to distinguish
     # filled spaces from blank ones
     rail = [['\n' for i in range(len(cipher))]
             for j in range(key)]

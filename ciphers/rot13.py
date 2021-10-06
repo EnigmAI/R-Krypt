@@ -33,6 +33,7 @@ def decrypt(text):
 
     return result
 
+
 if __name__ == "__main__":
     text = "Dhruv"
     print("Text  : " + text)

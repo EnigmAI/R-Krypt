@@ -1,4 +1,6 @@
-ASCII = [c for c in (chr(i) for i in range(32,127))]
+ASCII = [c for c in (chr(i) for i in range(32, 127))]
+
+
 def cipher(text, key, decode):
     op = ''
     for i, j in enumerate(text):
@@ -13,7 +15,11 @@ def cipher(text, key, decode):
             code = ASCII[(text_index + key_index) % len(ASCII)]
             op += code
     return op
+
+
 def main():
     print(cipher('Aditya', 'Upadhyay', 0))
     print(cipher('vUKYb[', 'Upadhyay', 1))
+
+
 main()

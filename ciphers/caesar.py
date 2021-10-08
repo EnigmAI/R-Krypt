@@ -41,7 +41,7 @@ def decrypt(text, s):
 
 
 if __name__ == "__main__":
-    text = "Dhruv"
+    text = "Guneet"
     s = 10
     print("Text  : " + text)
     print("Shift : " + str(s))

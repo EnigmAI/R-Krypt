@@ -50,7 +50,7 @@ def decrypt(message):
 
 
 def main():
-    message = "Dhruv Garg"
+    message = "Guneet S Talwar"
     result = encrypt(message.upper())
     print(result)
 

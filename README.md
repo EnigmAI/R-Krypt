@@ -20,3 +20,25 @@ python cli.py --cipher caesar --input_file sample.txt --output_file out.txt --en
 ## How To Contribute?
 - Add to the list of ciphers inside ciphers/ directory by coding the cipher in any language and the script should have separate functions for "encrypt", "decrypt" and "main" as shown in ciphers/baconian.py file.
 - You can also add the cipher functionality in the CLI by editing the cli.py file. Checkout how Caesar cipher is added inside cli.py to see how to add a cipher.
+
+## Ciphers Added
+- adfgvx
+- adfgx
+- affine
+- atabash
+- baconian
+- caaesar
+- column_transposition
+- four_square
+- hutton
+- morse
+- nihilistic
+- nomenclator
+- polybius_square
+- quagmire
+- rail_fence
+- rot13
+- RSA
+- running_key
+- vignere
+- xor

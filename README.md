@@ -40,5 +40,6 @@ python cli.py --cipher caesar --input_file sample.txt --output_file out.txt --en
 - rot13
 - RSA
 - running_key
+- substitution
 - vignere
 - xor

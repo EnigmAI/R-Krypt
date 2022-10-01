@@ -1,3 +1,4 @@
+from email.policy import default
 import click
 
 import ciphers.caesar as caesar_cipher
@@ -9,7 +10,6 @@ import ciphers.rot13 as rot13_cipher
     '--cipher',
     '-cipher',
     help='Select which cipher to use.',
-    required=True,
 )
 @click.option(
     '--input_file',
@@ -32,7 +32,10 @@ import ciphers.rot13 as rot13_cipher
     default=1,
     help='The numeric key to use for the caesar encryption / decryption.'
 )
-def main(cipher, input_file, output_file, encrypt, key):
+@click.option('--list-ciphers', is_flag=True, help='List out all ciphers')
+def main(cipher, input_file, output_file, encrypt, key, list_ciphers):
+    if list_ciphers:
+        click.echo(f'The current supported ciphers are: \ncaesar\nrot13')
     if cipher == 'caesar':
         caesar(input_file, output_file, encrypt, key)
     if cipher == 'rot13':
@@ -72,6 +75,7 @@ def rot13(input_file, output_file, encrypt):
     else:
         click.echo(cyphertext)
 
-
+def list_ciphers():
+    click.echo('Hello')
 if __name__ == '__main__':
     main()
